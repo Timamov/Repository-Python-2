@@ -29,3 +29,9 @@ jobs:
          whoami
          sleep 5
          pwd
+  checks_needed:
+    needs: [welcome_script, welcome_script_in_parralel]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome part dependency
+        run: echo "Hello, guys 🥺 from  dependencies"
