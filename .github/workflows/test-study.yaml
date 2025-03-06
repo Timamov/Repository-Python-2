@@ -1,0 +1,37 @@
+name: first CI/CD
+
+on:
+  pull_request:
+      branches:
+       - main
+
+jobs:
+  welcome_script:
+    runs-on: ubuntu-latest
+    steps:
+     - name: welcome part
+       run: echo "Hello, guys"
+     - name: Get info
+       run: |
+         echo "Getting user info..."
+         whoami
+         sleep 5
+         pwd
+
+  welcome_script_in_parralel:
+    runs-on: ubuntu-latest
+    steps:
+     - name: welcome part
+       run: echo "Hello, guys"
+     - name: Get info
+       run: |
+         echo "Getting user info..."
+         whoami
+         sleep 5
+         pwd
+  checks_needed:
+    needs: [welcome_script, welcome_script_in_parralel]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome part dependency
+        run: echo "Hello, guys 🥺 from  dependencies"
