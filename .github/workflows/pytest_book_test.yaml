@@ -15,7 +15,9 @@ jobs:
           python-version: '3.12'
 
       - name: Run pytest
-        uses: pytest@v2
+        run: |
+          poetry add pytest
+
       - name: Run tests
         run: |
           pytest -v
