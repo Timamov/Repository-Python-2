@@ -15,7 +15,7 @@ jobs:
           python-version: '3.12'
 
       - name: Run pytest
-        uses: pavelzw/pytest-action@v2
+        uses: pytest@v2
       - name: Run tests
         run: |
           pytest -v
