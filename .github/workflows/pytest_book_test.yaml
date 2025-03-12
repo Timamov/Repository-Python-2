@@ -16,7 +16,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          poetry add pytest
+          pip install pytest
 
       - name: Run tests
         run: |
