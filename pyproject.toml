@@ -1,21 +1,21 @@
-[project]
+[tool.poetry]
 name = "repository-python-2"
 version = "0.1.0"
-description = "my_project"
-authors = [
-    {name = "Timur Movchan",email = "timurmov25@gmail.com"}
-]
-license = {text = "MIT"}
+description = ""
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "pytest (>=8.3.5,<9.0.0)",
-    "flake8 (>=7.1.2,<8.0.0)",
-    "isort (>=6.0.1,<7.0.0)",
-    "black (>=25.1.0,<26.0.0)"
-]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.5"
+flake8 = "^7.1.2"
+isort = "^6.0.1"
+black = "^25.1.0"
+pyotp = "^2.9.0"
+pathlib = "^1.0.1"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
