@@ -72,4 +72,4 @@ with psycopg2.connect(dbname=PGDATABASE, user=PGUSER, password=PGPASSWORD, host=
                        customer_id INTEGER REFERENCES customer(id)
                    );
                """
-               cursor.execute(query)
+               cursor.execute(query) # 1
