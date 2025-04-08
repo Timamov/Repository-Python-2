@@ -16,6 +16,7 @@ pathlib = "^1.0.1"
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 psycopg2-binary = "^2.9.10"
 requests = "^2.32.3"
+boto3 = "^1.37.27"
 
 
 [build-system]
