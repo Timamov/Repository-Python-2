@@ -29,16 +29,14 @@ with psycopg2.connect(dbname=PGDATABASE, user=PGUSER, password=PGPASSWORD, host=
 
 with psycopg2.connect(dbname=PGDATABASE, user=PGUSER, password=PGPASSWORD, host=PGHOST, port=PORT) as connection:
     with connection.cursor() as cursor:
+        # query_insert = 'INSERT INTO brand (name) VALUES (%s)'
+        #result1 = cursor.execute(query_insert, ('BMW',))
+        # print(result1)
 
-
-    # query_insert = 'INSERT INTO brand (name) VALUES (%s)'
-    #result1 = cursor.execute(query_insert, ('BMW',))
-    # print(result1)
-
-    # query_insert = 'INSERT INTO owner (name) RETURNING id, name '
-    # owners = [
-    #     ('Max',),
-    #     ('Boyko',),
-    #     ('Alex',)
-    # ]
-    # cursor.executemany(cursor)
+        # query_insert = 'INSERT INTO owner (name) RETURNING id, name '
+        # owners = [
+        #     ('Max',),
+        #     ('Boyko',),
+        #     ('Alex',)
+        # ]
+        # cursor.executemany(cursor)
