@@ -321,6 +321,7 @@ files = [
 ]
 
 [[package]]
+
 name = "pika"
 version = "1.3.2"
 description = "Pika Python AMQP Client Library"
@@ -338,6 +339,7 @@ tornado = ["tornado"]
 twisted = ["twisted"]
 
 [[package]]
+
 name = "pillow"
 version = "11.1.0"
 description = "Python Imaging Library (Fork)"
@@ -525,8 +527,14 @@ version = "2.9.0"
 description = "Python One Time Password Library"
 optional = false
 python-versions = ">=3.7"
+
+
+groups = ["main"]
+
+
 groups = ["main"]
 n
+
 files = [
     {file = "pyotp-2.9.0-py3-none-any.whl", hash = "sha256:81c2e5865b8ac55e825b0358e496e1d9387c811e85bb40e71a3b29b288963612"},
     {file = "pyotp-2.9.0.tar.gz", hash = "sha256:346b6642e0dbdde3b4ff5a930b664ca82abfa116356ed48cc42c7d6590d36f63"},
@@ -579,6 +587,9 @@ png = ["pypng"]
 
 lock-version = "2.1"
 python-versions = ">=3.12 <4.0"
+
+content-hash = "5688dbcd47c025631723752203de12c57dcfb238d325b8f28a31d30572d03105"
+
 content-hash = "a036fc61bd2c3867f373f9e9df66be56e214cf888e5eb5fb3f9762a246d8ddca"
 
 lock-version = "2.0"
