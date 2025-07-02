@@ -1,4 +1,25 @@
-version: "3.8"
+
+version: '3.8'
+
+services:
+  postgres_database:
+    image: postgres:16
+    container_name: postgres_database
+    hostname: postgres_database
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT_OUTER}:${POSTGRES_PORT}"
+
+    networks:
+      - db_network
+
+
+networks:
+  db_network:
+    driver: bridge
+    version: "3.8"
 
 services:
   documentation:
@@ -8,3 +29,4 @@ services:
     restart: unless-stopped
     ports:
       - "8100:8011"
+
