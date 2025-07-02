@@ -1,17 +1,5 @@
 import psycopg2
 
-PGHOST='ep-super-field-a20ay3ih-pooler.eu-central-1.aws.neon.tech'
-PGDATABASE='neondb'
-PGUSER='neondb_owner'
-PGPASSWORD='npg_ov5L2JBFdyXT'
-PORT=5432
-
-
-PGHOST = 'ep-divine-smoke-a26bo7d2-pooler.eu-central-1.aws.neon.tech'
-PGDATABASE = 'neondb'
-PGUSER = 'neondb_owner'
-PGPASSWORD = 'npg_ly1wBZkHW7mg'
-
 with psycopg2.connect(dbname=PGDATABASE, user=PGUSER, password=PGPASSWORD, host=PGHOST, port=PORT) as connection:
     with connection.cursor() as cursor:
         query = '''
