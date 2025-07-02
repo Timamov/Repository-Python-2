@@ -1,3 +1,4 @@
+
 version: '3.8'
 
 services:
@@ -18,3 +19,14 @@ services:
 networks:
   db_network:
     driver: bridge
+    version: "3.8"
+
+services:
+  documentation:
+    image: squidfunk/mkdocs-material:latest
+    container_name: mkdocs
+    command: serve --dev-addr=0.0.0.0:8011 --watch-theme
+    restart: unless-stopped
+    ports:
+      - "8100:8011"
+
